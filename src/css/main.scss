@@ -1,11 +1,129 @@
+$color-primario: #222;
+$color-secundario: rgb(114, 114, 114);
+$color-variacion: #FF0080;
+$color-variacion-claro: #FFD5EB;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1 {
-  background-color: darkcyan;
-  color: lightcyan;
-  font-family: 'Lato', sans-serif;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+header nav {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.links {
+  margin-left: 50px;
+  height: 65px;
+  align-items: center;
+  display: flex;
+  border-bottom: 2px solid $color-variacion-claro;
+  ul {
+    display: flex;
+  }
+  li {
+    width: 100px;
+    height: 65px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  a {
+    margin: 0 auto;
+    text-decoration: none;
+    color:$color-primario;
+    text-align: center;
+  }
+}
+
+.active {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid $color-variacion;
+  a {
+    color:$color-variacion;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+  a {
+    color: $color-secundario;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+section {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-content { 
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-secundario;
+  h1 {
+    font-size: 50px;
+    span {
+      font-weight: bold;
+      color: $color-primario;
+    }
+  }
+  p {
+    font-size: 25px;
+    span {
+      font-weight: bold;
+      color: $color-variacion;
+    }
+  }
+  button {
+    width: 50%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-variacion-claro;
+    background-color: $color-variacion;
+    border-radius: 10px;
+  }
+}
+
+.right-content {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.footer-text {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: $color-secundario;
 }

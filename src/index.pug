@@ -1,12 +1,31 @@
 doctype html
 html
   head
-    title test parcel
+    title Practica Landing Page
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, maximum-scale=1.0, user-scalable=no')
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&display=swap" )
-    link(rel='stylesheet', href='css/main.scss')
-    script(src='https://kit.fontawesome.com/552ebddad2.js')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', rel='stylesheet') 
+    link(rel="stylesheet", href="./css/main.scss")
   body
-    h1 hola mundo
+    header
+      nav
+        .links
+          ul
+            li(class='active') 
+              a(href='/') Home
+            li 
+              a(href='/') Shots
+            li 
+              a(href='/') Profile
+        .user
+          a(href='/') Username
+    section
+      .left-content
+        h1 Hello #[span World]
+        p Lorem ipsum dolor sit elit. Numquam ea labore ducimus minima #[span dolor] iusto accusamus maxime debitis.
+        button Button
+      .right-content
+        img(src='./image.png', alt='landing-image')
+    footer
+      .footer-text Made for xxxx 2020d
